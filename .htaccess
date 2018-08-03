@@ -1,0 +1,76 @@
+<IfModule mod_rewrite.c>
+
+RewriteEngine on
+
+RewriteRule ^index\.php$ media.php?module=home [L]
+RewriteRule ^$ media.php?module=home [L]
+
+RewriteRule ^berita\.html$ media.php?module=berita&id=$1 [L]
+RewriteRule ^berita\/([0-9]+)\/([0-9]+)\/([0-9]+)\/([0-9]+)\/(.*)$ media.php?module=detailberita&judul=$5 [L]
+RewriteRule ^berita/hal/(.*)$ media.php?module=berita&halberita=$1 [L]
+
+RewriteRule ^kategoriberita/(.*)$ media.php?module=detailkategoriberita&cat=$1 [L]
+RewriteRule ^halkategoriberita/(.*)/(.*)$ media.php?module=detailkategoriberita&cat=$1&halkategoriberita=$2 [L]
+
+RewriteRule ^ukm\.html$ media.php?module=ukm&id=$1 [L]
+RewriteRule ^ukm/hal/(.*)$ media.php?module=ukm&halukm=$1 [L]
+RewriteRule ^ukm/(.*)\.html$ media.php?module=detailukm&tema=$1 [L]
+RewriteRule ^ukm\/([0-9]+)\/([0-9]+)\/([0-9]+)\/([0-9]+)\/(.*)$ media.php?module=detailukm&tema=$5 [L]
+
+RewriteRule ^agenda\.html$ media.php?module=agenda&id=$1 [L]
+RewriteRule ^agenda/hal/(.*)$ media.php?module=agenda&halagenda=$1 [L]
+RewriteRule ^agenda/(.*)\.html$ media.php?module=detailagenda&tema=$1 [L]
+RewriteRule ^agenda\/([0-9]+)\/([0-9]+)\/([0-9]+)\/([0-9]+)\/(.*)$ media.php?module=detailagenda&tema=$5 [L]
+
+RewriteRule ^hal/(.*)$ media.php?module=halamanstatis&judul=$1 [L]
+
+RewriteRule ^pengajar\.html$ media.php?module=pengajar&id=$1 [L]
+RewriteRule ^pengajar/hal/(.*)$ media.php?module=pengajar&halpengajar=$1 [L]
+
+RewriteRule ^jadwal\.html$ media.php?module=jadwal&id=$1 [L]
+RewriteRule ^jadwal/hal/(.*)$ media.php?module=jadwal&halpengajar=$1 [L]
+
+RewriteRule ^galeri-video\.html$ media.php?module=galerivideo&id=$1 [L]
+RewriteRule ^galeri-video/hal/(.*)$ media.php?module=galerivideo&halgalerivideo=$1 [L]
+RewriteRule ^galeri-video\/([0-9]+)\/([0-9]+)\/([0-9]+)\/([0-9]+)\/(.*)$ media.php?module=detailgalerivideo&jdl_video=$5 [L]
+
+RewriteRule ^galeri-foto\.html$ media.php?module=galerifoto&id=$1 [L]
+RewriteRule ^galeri-foto/hal/(.*)$ media.php?module=galerifoto&halgalerifoto=$1 [L]
+RewriteRule ^galeri-foto\/([0-9]+)\/([0-9]+)\/([0-9]+)\/([0-9]+)\/(.*)$ media.php?module=detailgalerifoto&jdl_album=$5 [L]
+
+RewriteRule ^hasil-poling\.html$ media.php?module=hasilpoling&id=$1 [L]
+RewriteRule ^lihat-poling\.html$ media.php?module=lihatpoling&id=$1 [L]
+
+RewriteRule ^pengumuman\.html$ media.php?module=pengumuman&id=$1 [L]
+RewriteRule ^pengumuman\/([0-9]+)\/([0-9]+)\/([0-9]+)\/([0-9]+)\/(.*)$ media.php?module=detailpengumuman&tema=$5 [L]
+RewriteRule ^pengumuman/hal/(.*)$ media.php?module=pengumuman&halpengumuman=$1 [L]
+
+
+RewriteRule ^hubungi-kami\.html$ media.php?module=hubungi&id=$1 [L]
+RewriteRule ^hubungi-aksi\.html$ media.php?module=hubungiaksi&id=$1 [L]
+
+RewriteRule ^kategoriberita/(.*)$ media.php?module=detailkategoriberita&cat=$1 [L]
+RewriteRule ^halkategoriberita/(.*)/(.*)$ media.php?module=detailkategoriberita&cat=$1&halkategoriberita=$2 [L]
+
+
+RewriteRule ^hasil-pencarian\.html$ media.php?module=hasilpencarian&id=$1 [L]
+RewriteRule ^not-found\.html$ media.php?module=notfound&id=$1 [L]
+
+RewriteRule ^download/hal/(.*)$ media.php?module=download&haldownload=$1 [L]
+RewriteRule ^download\.html$ media.php?module=download&id=$1 [L]
+
+RewriteRule ^pendaftaran\.html$ media.php?module=pendaftaran&id=$1 [L]
+RewriteRule ^proses-daftar\.html$ media.php?module=prosesdaftar&id=$1 [L]
+RewriteRule ^lupa-password\.html$ media.php?module=lupapassword&id=$1 [L]
+RewriteRule ^kirim-password\.html$ media.php?module=kirimpassword&id=$1 [L]
+RewriteRule ^data-siswa\.html$ media.php?module=datasiswa&id=$1 [L]
+RewriteRule ^data-siswa/hal/(.*)$ media.php?module=datasiswa&haldatasiswa=$1 [L]
+RewriteRule ^print-form-(.*)\.html$ media.php?module=printfomulir=$1 [L]
+RewriteRule ^hasil-lulus-administrasi\.html$ media.php?module=hasillulusadministrasi&id=$1 [L]
+RewriteRule ^hasil-lulus-administrasi/hal/(.*)$ media.php?module=hasillulusadministrasi&halhasillulusadministrasi=$1 [L]
+RewriteRule ^hasil-kelulusan-siswa\.html$ media.php?module=hasilkelulusansiswa&id=$1 [L]
+RewriteRule ^hasil-kelulusan-siswa/hal/(.*)$ media.php?module=hasilkelulusansiswa&halhasilkelulusansiswa=$1 [L]
+Options All -Indexes
+
+</IfModule>
+

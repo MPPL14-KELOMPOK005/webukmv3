@@ -1,0 +1,24 @@
+
+UNTUK MENJALANKAN SCRIPT DI LOCALHOST
+=====================================
+
+- Setting database pada
+config -> koneksi.php
+
+
+UNTUK LOGIN KE ADMINISTRATOR
+============================
+-ketikan pada browser http://localhost/namafolder/adminweb
+-Login:
+Username: admin
+password: admin
+
+
+
+Untuk USER
+ID anggota   : UKM00001
+ID Pengurus  : PUKM0001
+
+PASSWORD     : 123456
+
+*password sama untuk semua user kecuali admin	
